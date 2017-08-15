@@ -8,15 +8,15 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
-app.get('code1',function(req,res)
+app.get('/code1',function(req,res)
 {
     res.send('HI  THIS IS A NEW PAGE IN JS CODE1');
 });
-app.get('code2',function(req,res)
+app.get('/code2',function(req,res)
 {
     res.send('HI  THIS IS A NEW PAGE IN JS CODE2');
 });
-app.get('code3',function(req,res)
+app.get('/code3',function(req,res)
 {
     res.send('HI  THIS IS A NEW PAGE IN JS CODE3');
 });
