@@ -10,7 +10,7 @@ app.get('/', function (req, res) {
 });
 app.get('/code1',function(req,res)
 {
-    res.send('HI  THIS IS A NEW PAGE IN JS CODE1');
+    res.sendFile(path.join(__dirname, 'ui', 'code1.html'));
 });
 app.get('/code2',function(req,res)
 {
