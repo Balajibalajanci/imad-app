@@ -8,9 +8,65 @@ app.use(morgan('combined'));
 app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
+var code1={
+    title:'BALAJI IAMD',
+    heading:'CODE 1',
+    date:'AUG 15,2017',
+    content:`               <p>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new</p>
+                            
+                            <p>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new</p>
+                            
+                            <p>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new
+                            <br/>this is my first code and plz help to me understand this concept and i want to learn something new</p>
+                            `
+    
+};
+function createTemplate (data){
+var title=data.title;
+var date=data.date;
+var heading=data.heading;
+var content=data.content;
+var htmlTemplate= 
+`
+<html>
+    <head>
+           <title>
+            ${title}
+            </title>
+            <link href="/ui/style.css" rel="stylesheet" />
+    </head>
+        <body>
+            <div>
+                <a href="/">Home</a>
+            </div>
+                     <hr/>
+            <h3>
+                    ${heading}
+            </h3>
+            <div class="container">
+                    <div>
+                        ${date}
+                    </div>
+                    <div>
+                        ${content}
+                            
+                    </div>
+            </div>
+            </body>
+</html>
+`;
+return htmlTemplate;
+}
+
+
 app.get('/code1',function(req,res)
 {
-    res.sendFile(path.join(__dirname, 'ui', 'code1.html'));
+    res.send(createTemplate(code1));
 });
 app.get('/code2',function(req,res)
 {
