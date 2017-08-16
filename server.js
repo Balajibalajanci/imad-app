@@ -77,8 +77,8 @@ app.get('/code3',function(req,res)
     res.send('HI  THIS IS A NEW PAGE IN JS CODE3');
 });
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'server.js'));
+app.get('/ui/main.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'main.js'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
