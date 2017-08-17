@@ -3,6 +3,16 @@ var element=document.getElementById('main-text');
 element.innerHTML='THEORY OF COMPUTATION';
 //maove image
 var image=document.getElementById('madi');
+var marginLeft=0;
+function moveRight(){
+    marginLeft=marginleft + 10;
+    image.style.marginLeft =marginLeft + 'px';
+}
+
+
+
 image.onclick=function(){
-     image.style.marginLeft='100px';  
+    
+    var interval=setInterval(moveRight,100);
+      
 };
